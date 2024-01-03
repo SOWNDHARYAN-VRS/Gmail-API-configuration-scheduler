@@ -119,7 +119,8 @@ public class MailUpdateScheduler {
 
 
                 }
-                mailService.saveMailData(subject,from,"slizeware@gmail.com",date);
+                //replace with the mail that you use
+                mailService.saveMailData(subject,from,"example@gmail.com",date);
 
                 ModifyMessageRequest mods = new ModifyMessageRequest().setRemoveLabelIds(Collections.singletonList("UNREAD"));
                 service.users().messages().modify(user, message.getId(), mods).execute();
